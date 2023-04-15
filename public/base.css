@@ -1,0 +1,21 @@
+/*setting background color in body*/
+body{
+  background-color: #808080;
+}
+
+/*stylying and centering board using its class*/
+.board{
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+}
+
+/*defining borders around and centering the content in each "block", giving the table a set size*/
+.cell{
+  border: 1px solid #000000;
+  width: 200px;
+  height: 200px;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+}
