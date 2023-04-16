@@ -2,9 +2,11 @@
 const board = document.querySelector("#gameboard")
 const messageDisplay = document.querySelector("#info")
 const newGameButton = document.getElementById("restart")
-const container = document.getElementById("gameboard")
-const startCells = [
+let startCells = [
 	"", "", "", "", "", "", "", "", ""
+]
+let newCells = [
+	".square", ".square", "square", "square", "square", "square", "square", "square", "square"
 ]
 //defining global variable for cross
 let go = "cross"
@@ -39,20 +41,12 @@ function addGo(e) {
 	checkScore()
 }
 
-//adding event listener to button
-newGameButton.addEventListener('click', () => {
-	container.remove(createBoard())
-	container.append(createBoard())
-})
-
-
-
 //functions to check if circle or x get the required combinations to "win"
 function checkScore() {
 	const allSquares = document.querySelectorAll(".square")
 	
 	//adding array of possible "winning" element combinations
-	const winningCombos = [
+	let winningCombos = [
 		[0,1,2], [3,4,5], [6,7,8],
 		[0,3,6], [1,4,7], [2,5,8],
 		[0,4,8], [2,4,6]
@@ -69,6 +63,7 @@ function checkScore() {
 		}
 	})
 
+
 	//same as above except it is checking for X
 	let xWin;
 	winningCombos.forEach(array => {
@@ -79,6 +74,7 @@ function checkScore() {
 			return
 		}
 	})
+}
 	
 	// let tie;
 	// winningCombos.forEach(array => {
@@ -87,4 +83,3 @@ function checkScore() {
 	// 		return
 	// 	}
 	// })
-}
