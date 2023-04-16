@@ -1,36 +1,17 @@
-<!--setting up the html frame-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Tic-Tac-Toe</title>
-    <meta name="viewport" content="width=device-width, height=device-height">
-
-    <!-- linking the stylesheet and js files-->
+    <title>Tic Tac Toe</title>
+    <!-- linking the stylesheet-->
     <link rel="stylesheet" href="base.css">
-    <script src="/public/index.js"></script>
   </head>
-
   <body>
-    <!--adding 3 table data cells in 3 table row containers for the "blocks" of a tic tac toe board-->
-    <table class="board">
-      <tr>
-        <td data-block="b-1" class="cell">0</td>
-        <td data-block="b-2" class="cell">1</td>
-        <td data-block="b-3" class="cell">2</td>
-      </tr>
-      <tr>
-        <td data-block="b-4" class="cell">3</td>
-        <td data-block="b-5" class="cell">4</td>
-        <td data-block="b-6" class="cell">5</td>
-      </tr>
-      <tr>
-        <td data-block="b-7" class="cell">6</td>
-        <td data-block="b-8" class="cell">7</td>
-        <td data-block="b-9" class="cell">8</td>
-      </tr>
-    </table>
+    <!--adding board and paragraph container-->
+    <div id="gameboard"></div>
+    <p id="info"></p>
     <button id="restart">New Game</button>
+    <!-- linking the js file-->
+    <script src="index.js"></script>
   </body>
-
 </html>
