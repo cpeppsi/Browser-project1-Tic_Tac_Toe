@@ -33,7 +33,7 @@ body {
 }
 
 /*creating the circle to be displayed when called in java*/
-.circle {
+.O {
 	height: 90px;
 	width: 90px;
 	border-radius: 50%;
@@ -42,7 +42,7 @@ body {
 }
 
 /*creating the X to be used in java*/
-.cross {
+.X {
 	height: 90px;
 	width: 90px;
 	position: relative;
@@ -50,20 +50,20 @@ body {
 }
 
 /*styling color and position of X*/
-.cross:before, .cross:after {
+.X:before, .X:after {
 	content: "";
 	position: absolute;
 	background-color: #ffd700;
 }
 
-.cross:before {
+.X:before {
 	left: 50%;
 	width: 30%;
 	margin-left: -15%;
 	height: 100%;
 }
 
-.cross:after {
+.X:after {
 	top: 50%;
 	height: 30%;
 	margin-top: -15%;

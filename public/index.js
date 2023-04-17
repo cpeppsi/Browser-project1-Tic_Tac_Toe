@@ -5,11 +5,9 @@ const newGameButton = document.getElementById("restart")
 let startCells = [
 	"", "", "", "", "", "", "", "", ""
 ]
-let newCells = [
-	".square", ".square", "square", "square", "square", "square", "square", "square", "square"
-]
+
 //defining global variable for cross
-let go = "cross"
+let go = "X"
 messageDisplay.textContent = "X goes first"
 
 //adding function to make the board
@@ -34,9 +32,9 @@ function addGo(e) {
 	goDisplay.classList.add(go)
 	e.target.append(goDisplay)
 	//if statement to switch turn
-	go = go === "circle"  ? "cross" : "circle"
+	go = go === "O"  ? "X" : "O"
 	//displaying the content and adding an event listener to remove the ability to click on a cell thats already been picked
-	messageDisplay.textContent = "it is now " + go + "'s go."
+	messageDisplay.textContent = go + "'s turn"
 	e.target.removeEventListener("click", addGo)
 	checkScore()
 }
@@ -53,33 +51,20 @@ function checkScore() {
 	]
 
 	//using forEach to check each cell for a circle and if it is one of the "winning combinations" and displaying the win
-	let oWin;
+	
 	winningCombos.forEach(array => {
-		const circleWins = array.every(cell => allSquares[cell].firstChild?.classList.contains("circle"))
-		if(circleWins) {
-			messageDisplay.textContent = "Circle Wins!"
+    const oWins = array.every(cell => allSquares[cell].firstChild?.classList.contains("O"))
+    const xWins = array.every(cell => allSquares[cell].firstChild?.classList.contains("X"))
+    if(oWins && !xWins) {
+			messageDisplay.textContent = "O Wins!"
 			allSquares.forEach(square => square.replaceWith(square.cloneNode(true)))
 			return
 		}
-	})
-
-
-	//same as above except it is checking for X
-	let xWin;
-	winningCombos.forEach(array => {
-		const crossWins = array.every(cell => allSquares[cell].firstChild?.classList.contains("cross"))
-		if(crossWins) {
-			messageDisplay.textContent = "Cross Wins!"
+    else if(xWins && !oWins) {
+			messageDisplay.textContent = "X Wins!"
 			allSquares.forEach(square => square.replaceWith(square.cloneNode(true)))
 			return
-		}
+    }
 	})
 }
-	
-	// let tie;
-	// winningCombos.forEach(array => {
-	// 	if(!xWin && !oWin) {
-	// 		messageDisplay.textContent = "Tie"
-	// 		return
-	// 	}
-	// })
+
