@@ -23,26 +23,26 @@ To run the game locally on your machine, follow these simple steps:
 bash
 Copy code
 git clone https://github.com/cpeppsi/Browser-project1-Tic_Tac_Toe.git
-1. Navigate to the project directory:
+2. Navigate to the project directory:
 
 bash
 Copy code
 cd tic-tac-toe-browser-game
-1. Open the index.html file in your preferred web browser.
-1. Start playing Tic Tac Toe!
+3. Open the index.html file in your preferred web browser.
+3. Start playing Tic Tac Toe!
 
 ## How to Play
-2. Open the application in your web browser.
-2. Choose the number of players (1 or 2).
-2. If playing with two players, take turns clicking on the squares to make your moves.
-2. The game will automatically detect a win or loss and display the result.
-2. Click the "New Game" button to reset the board and start a new game.
+1. Open the application in your web browser.
+1. Choose the number of players (1 or 2).
+1. If playing with two players, take turns clicking on the squares to make your moves.
+4. The game will automatically detect a win or loss and display the result.
+4. Click the "New Game" button to reset the board and start a new game.
 
 ## Contributing
 We welcome contributions from the community. If you'd like to contribute to the project, please follow these steps:
 
-3. Fork the repository.
-3. Create a new branch for your feature or bug fix: git checkout -b feature-name.
+1. Fork the repository.
+1. Create a new branch for your feature or bug fix: git checkout -b feature-name.
 3. Make your changes and commit them: git commit -m 'Description of changes'.
 3. Push the changes to your fork: git push origin feature-name.
 3. Open a pull request.
