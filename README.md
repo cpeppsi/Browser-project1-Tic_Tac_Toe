@@ -18,17 +18,13 @@
 ## Getting Started
 To run the game locally on your machine, follow these simple steps:
 
-1. Clone this repository to your local machine:
+1. Clone this repository to your local machine using the code below:
 
-bash
-Copy code
 git clone https://github.com/cpeppsi/Browser-project1-Tic_Tac_Toe.git
 
-2. Navigate to the project directory:
+2. Navigate to the project directory using the code below:
 
-bash
-Copy code
-cd tic-tac-toe-browser-game
+cd Browser-project1-Tic_Tac_Toe
 
 3. Open the index.html file in your preferred web browser.
 3. Start playing Tic Tac Toe!
