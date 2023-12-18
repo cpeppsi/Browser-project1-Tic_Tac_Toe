@@ -3,7 +3,6 @@
 
 ## Table of Contents
 - Features
-- Demo
 - Getting Started
 - How to Play
 - Contributing
